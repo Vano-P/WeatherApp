@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--    <meta name="keywords" content="description">-->
+    <!--    <meta name="description" content="description">-->
+    <meta name="author" content="V. Poghosyan">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+
+<main class="main">
+    <article class="weather">
+        <div class="weather__search">
+            <label><input type="text" class="weather__search_input" placeholder="Enter City Name"></label>
+            <button class="weather__search_btn"></button>
+        </div>
+
+        <div class="weather__main">
+            <img class="weather__main_img" src="./assets/images/clear.png" alt="">
+            <h1 class="weather__main_temp"></h1>
+            <h2 class="weather__main_city"></h2>
+        </div>
+
+        <div class="weather__more">
+            <div class="weather__moreHum">
+                <img class="weather__moreHum_img" src="./assets/images/humidity.png" alt="">
+                <div class="weather__moreHum_col">
+                    <h3 class="weather__moreHum_description"></h3>
+                    <p class="weather__moreHum_title">Humidity</p>
+                </div>
+            </div>
+            <div class="weather__moreWSpeed">
+                <img class="weather__moreWSpeed_img" src="./assets/images/wind.png" alt="">
+                <div class="weather__moreWSpeed_col">
+                    <h3 class="weather__moreWSpeed_description"></h3>
+                    <p class="weather__moreWSpeed_title">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="modal">
+        <div class="modal__win">
+            <p class="modal__win_title">Enter City name</p>
+            <p class="errorCityName">Invalid City name</p>
+        </div>
+    </div>
+</main>
+
+<noscript>Please enable JavaScript in your browser</noscript>
+<script src="./assets/scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/*---------- Normalize ----------*/
+@import 'Normalize';
+
+.main {
+  background-color: #666;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to top, #726CCF 0%, #84CF7C 100%);
+  gap: 30px;
+
+  &__search {
+    display: flex;
+    column-gap: 10px;
+
+    // .weather__search_input
+    &_input {
+      outline: 0;
+      border: 0;
+      border-radius: 3px;
+      height: 30px;
+      padding: 0 10px;
+    }
+
+    // .weather__search_btn
+    &_btn {
+      outline: 0;
+      border: 0;
+      border-radius: 3px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      background: #fff url("../images/search.png") center center no-repeat;
+      background-size: 18px 21px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    &_img {
+      width: 100px;
+    }
+
+    &_temp {
+      color: #fff;
+      font-size: 50px;
+    }
+
+    &_city {
+      color: #fff;
+      font-size: 30px;
+    }
+  }
+
+  &__more {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__moreWSpeed, &__moreHum{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &_col {}
+    &_img {
+      width: 30px;
+      height: 35px;
+    }
+
+    &_description {
+      font-size: 20px;
+      color: #ddd;
+    }
+
+    &_title {
+      font-size: 14px;
+      color: #ddd;
+    }
+  }
+  &__moreHum_img {
+    height: 30px;
+  }
+
+  &__main, &__more {display: none;}
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .3);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  &__win {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(5px);
+
+    &_title {font-size: 2em;}
+    .errorCityName {display: none; font-size: 2em;}
+  }
+}
